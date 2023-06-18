@@ -1,17 +1,69 @@
 <!DOCTYPE html>
-    <html lang="en"> 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-        <link rel="stylesheet" href="sample/styles.css">
-        <link rel="stylesheet"
-        href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css">
-        <script type="module" src="sample/utils.js"></script>
-        <script type="module" src="sample/data.js"></script>
-        <title>html form</title>
-    </head>
-    <body>
-        <div id="greeting"></div>
-    </body>
+<html lang="en">
+
+<head class="container text-center">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mock Restaurant</title>
+    <link rel="stylesheet" href="/sample/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="/sample/utils.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="starting">
+            <h1>Welcome to Mock Restaurant!</h1>
+            <div id="nav-bar">
+                <div class="logo navPart">
+                    <a href="#">
+                        <img class="logo" src="https://cdn-icons-png.flaticon.com/512/3448/3448609.png" alt="" />
+                    </a>
+                </div>
+                <nav class="navigation navPart">
+                    <a href="" class="col nav-link active">Home</a>
+                    <a href="" class="col nav-link active">About us</a>
+                    <a href="" class="col nav-link active">Our work</a>
+                </nav>
+                <div class="searching navPart">
+                    <input type="text" class="form-control" placeholder="Search" aria-label="Search">
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="starting"></div>
+        <div class="container text-center" id="menu"></div>
+        <div id="login-form">
+            <p class="loginText">Login to your account and start ordering our delicious food!</p>
+            <form id="form" action="">
+                <input id="username" type="text">
+                <input id="password" type="password">
+                <button type="submit" id="submit">Login</button>
+            </form>
+            <div class="errorMessage"></div>
+        </div>
+        <div id="order-checkout">
+            <form id="myForm" action="">
+                <p>Name:</p><input id="customer-name" type="text" placeholder="Enter your name here...">
+                <label for="myform_phone"></label>
+                <p>Phone Number:</p><input id="myform_phone" type="tel" placeholder="(###) ###-####" /><br>
+                <label for="tip">Add a tip</label>
+                <select name="tip" id="tip">
+                    <option value="0">Not interested</option>
+                    <option value="5">5%</option>
+                    <option value="10">10%</option>
+                    <option value="15">15%</option>
+                </select>
+            </form>
+            <button id="pay-now-button">Pay now</button>
+            <button id="back-to-order-button">Back To the Order</button>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+
 </html>

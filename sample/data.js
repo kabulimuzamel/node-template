@@ -1,7 +1,11 @@
-const store = {
-    name: 'Sol',
-    city: 'STL',
-    occupation: 'teacher'
+function hideInitialElements() {
+    $('#login-display-info').hide()
+    $('#clear-login-display').hide()
+    $('#video-games-comment').hide()
 }
 
-export default store;
+function getLoginInfo() {
+    return `Your username is ${this.username} and your password is ${this.password}`
+}
+
+export {hideInitialElements, getLoginInfo}

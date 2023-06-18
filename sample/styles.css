@@ -1,3 +1,249 @@
-.greeting {
-    font-weight: bold;
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    position: relative;
+    background: url("https://img.freepik.com/premium-vector/abstract-islamic-background-design-with-geometric-shape-white-background-vector_51543-1098.jpg");
+    display: grid;
+    grid-template: 120px auto 30px / 1200px;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    grid-template-areas: "header" "main" "footer";
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
+
+
+
+#nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#menu {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.starting {
+    color: #070A52;
+    font-style: italic;
+    width: 1200px;
+    height: 100px;
+    background: linear-gradient(rgb(255, 255, 255), rgb(75, 75, 75));
+    ;
+    background-repeat: repeat;
+    padding-top: 20px;
+}
+
+.logo {
+    height: 5rem;
+    position: relative;
+    bottom: 1.1rem;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 0.5;
+
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15rem;
+}
+
+.foodBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 20rem;
+    width: 15rem;
+    padding: 1rem;
+    box-shadow: 0 0 50px grey;
+    border: 3px solid grey;
+    border-radius: 10px;
+    margin: 1rem;
+}
+
+.foodBox:hover {
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+}
+
+.foodImage {
+    height: 17rem;
+    width: 15rem;
+    border-radius: 5%;
+    margin-top: 15px;
+    margin-bottom: 10px;
+
+}
+
+#kabob-image {
+    margin-top: auto;
+    height: 13rem;
+}
+
+#order h4 {
+    color: rgb(72, 72, 72);
+    font-style: italic;
+    width: 100px;
+    height: 30px;
+    padding-top: 5px;
+    background: linear-gradient(90deg, rgba(250, 250, 250, 0.8) 0%, rgba(50, 50, 50, 0.9) 100%);
+    border-radius: 3px
+}
+
+
+#order div,
+#checkout-btn {
+    color: #434343;
+    width: 100px;
+    height: 30px;
+    background: linear-gradient(90deg, rgba(250, 250, 250, 0.8) 0%, rgba(50, 50, 50, 0.9) 100%);
+    border-radius: 3px
+}
+
+#checkout-btn {
+    font-size: medium;
+    font-weight: bolder;
+}
+
+#total {
+    padding-bottom: 4px;
+}
+
+#pay-now-button,
+#back-to-order-button,
+#submit {
+    color: #ececec;
+    width: 200px;
+    height: 30px;
+    font-weight: bolder;
+    background: radial-gradient(circle at top left, #000000, #000000);
+    border-radius: 10px;
+}
+
+#order {
+    border: 2px solid grey;
+    border-radius: 5px;
+    margin-top: 116px;
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    z-index: 10000;
+}
+
+a {
+    text-decoration: none;
+}
+
+input {
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.loginText {
+    font-size: larger;
+    font-style: italic;
+    font-weight: bolder;
+}
+
+.btn {
+    border: 0.5px solid black;
+    border-radius: 5px;
+    width: 10rem;
+    margin-top: 1.5px;
+    margin-left: 41px;
+}
+
+.btn:hover {
+    background-color: rgb(175, 175, 175);
+}
+
+#order-checkout {
+    margin-top: 7rem;
+}
+
+@media screen and (max-width: 1100px) {
+    #menu {
+        display: grid;
+        grid-template: repeat(3, auto) / repeat(2, auto);
+    }
+
+    #nav-bar {
+        justify-content: center;
+    }
+
+    .navigation {
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #menu {
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    .navPart {
+        font-size: 0.9rem;
+        justify-content: center;
+    }
+
+    a {
+        margin-left: 40px;
+    }
+
+    #login-form {
+        align-items: center;
+        font-size: rem;
+    }
+
+    #form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #username,
+    #password {
+        width: 200px;
+    }
+
+    .loginText {
+        font-size: 0.8rem;
+    }
+
 }
